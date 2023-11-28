@@ -1,19 +1,17 @@
 package mobile.website.backend.mobilesite.service;
 
-//import mobile.website.backend.mobilesite.entity.Agents;
-//import mobile.website.backend.mobilesite.repo.AgentRepository;
-import mobile.website.backend.mobilesite.request.AgentLoginRequest;
+import mobile.website.backend.mobilesite.repo.AgentRepo;
+import mobile.website.backend.mobilesite.entity.Agent;
+import mobile.website.backend.mobilesite.req.AgentLoginRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AgentService {
+    @Autowired
+    AgentRepo agentRepo;
 
-    //AgentRepository agentRepository;
-
-
-    public boolean verifyAgentLogin(AgentLoginRequest agentLoginRequest) {
-        return true;
-//        Agents user = agentRepository.findByUsername(agentLoginRequest.getUsername());
-//        return user != null && user.getPassword().equals(agentLoginRequest.getPassword());
+    public boolean studentExists(AgentLoginRequest data) {
+        return false;
     }
 }

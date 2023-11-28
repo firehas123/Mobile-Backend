@@ -1,15 +1,29 @@
 package mobile.website.backend.mobilesite.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
-@Getter
-@Setter
 @Entity
-public class Agents {
+@Setter
+public class Agent {
+    public Long getId() {
+        return id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +39,7 @@ public class Agents {
     @NotBlank(message = "Email is required")
     private String email;
 
-    public Agents() {
+    public Agent() {
     }
 
     @Override

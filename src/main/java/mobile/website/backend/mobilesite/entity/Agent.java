@@ -1,7 +1,6 @@
 package mobile.website.backend.mobilesite.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
@@ -13,8 +12,8 @@ public class Agent {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
     public String getPassword() {
@@ -31,7 +30,7 @@ public class Agent {
 
     @Column(unique = true)
     @NotBlank(message = "Username is required")
-    private String username;
+    private String userName;
 
     @NotBlank(message = "Password is required")
     private String password;
@@ -46,7 +45,7 @@ public class Agent {
     public String toString() {
         return "Users{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", username='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 '}';

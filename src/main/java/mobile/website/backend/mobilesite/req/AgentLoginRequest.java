@@ -6,14 +6,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AgentLoginRequest {
-    private String UserAgent;
+    private String userAgent;
     private String password;
 
-    public String getUserAgent() {
-        return UserAgent;
-    }
-
-    public String getPassword() {
-        return password;
+    @Override
+    public String toString() {
+        return "AgentLoginRequest{" +
+                "userAgent='" + userAgent + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
